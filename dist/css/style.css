@@ -3332,6 +3332,123 @@ body * {
 	margin: 0;
 }
 
+.contacts {
+	background: var(--white);
+}
+
+.contacts__body {
+	display: flex;
+}
+
+.contacts__info {
+	flex: 0 1 50%;
+	padding: 50px 0;
+}
+
+.contacts__action {
+	flex: 0 1 50%;
+	padding: 50px 15px;
+}
+
+.contacts-info__title {
+	margin: 0;
+}
+
+.contacts-info__title:not(:last-child) {
+	margin-bottom: 50px;
+}
+
+.address {
+	font-style: normal;
+	max-width: 175px;
+}
+
+.address__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.address__title {
+	margin: 0;
+	color: var(--light-purple);
+}
+
+.address__text {
+	margin: 0;
+}
+
+.address__phone {
+	text-decoration: none;
+	display: inline-block;
+	color: var(--black);
+	position: relative;
+}
+
+.address__phone::after {
+	content: "";
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background: var(--black);
+	transition: all 0.3s;
+}
+
+.contacts-action {
+	background: var(--dark-purple);
+}
+
+.contacts-action__title {
+	margin: 0;
+	text-align: center;
+	color: var(--white);
+}
+
+.contacts-action__title::after {
+	background: var(--white);
+}
+
+.contacts-action__title:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.contacts-action__form {
+	display: flex;
+	flex-direction: column;
+	max-width: 450px;
+	margin: 0 auto;
+}
+
+.contacts-action__input {
+	padding: 24px;
+	border: 1px solid var(--white);
+	color: var(--white);
+	background: transparent;
+	text-align: center;
+}
+
+.contacts-action__input::-moz-placeholder {
+	color: var(--gray);
+}
+
+.contacts-action__input::placeholder {
+	color: var(--gray);
+}
+
+.contacts-action__input:not(:last-child) {
+	margin-bottom: 12px;
+}
+
+.contacts-action__input:nth-last-child(2) {
+	margin-bottom: 78px;
+}
+
+.contacts-action__btn {
+	border: none;
+	padding: 15px 74px;
+	align-self: center;
+}
+
 @media (max-width: 75em) {
 	.first {
 		margin-bottom: 65px;
@@ -3357,6 +3474,10 @@ body * {
 
 	.services-info__inner:not(:last-child) {
 		margin-bottom: 35px;
+	}
+
+	.contacts__action {
+		flex: 0 1 60%;
 	}
 }
 
@@ -3427,6 +3548,18 @@ body * {
 	.benefit {
 		position: relative;
 		z-index: 2;
+	}
+
+	.contacts__body {
+		flex-direction: column;
+	}
+
+	.contacts__info {
+		padding: 0 0 50px 0;
+	}
+
+	.address {
+		max-width: 100%;
 	}
 }
 
@@ -3507,6 +3640,18 @@ body * {
 	.gallery__slider-container:not(:last-child) {
 		margin-bottom: 40px;
 	}
+
+	.contacts-info__title:not(:last-child) {
+		margin-bottom: 35px;
+	}
+
+	.contacts-action__input:nth-last-child(2) {
+		margin-bottom: 35px;
+	}
+
+	.contacts-action__btn {
+		width: 100%;
+	}
 }
 
 @media (hover: hover) {
@@ -3573,5 +3718,14 @@ body * {
 
 	.gallery-slide__wrapper:hover .gallery-slide__image img {
 		transform: scale(1.1);
+	}
+
+	.address__phone:hover::after {
+		width: 100%;
+	}
+
+	.contacts-action__btn:hover {
+		background: var(--white);
+		color: var(--light-purple);
 	}
 }
