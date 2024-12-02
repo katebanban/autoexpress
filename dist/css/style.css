@@ -3449,6 +3449,24 @@ body * {
 	align-self: center;
 }
 
+.footer {
+	background: var(--dark-purple);
+	padding: 25px 0;
+}
+
+.footer__body {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 15px 30px;
+}
+
+.footer__policy {
+	text-decoration: none;
+	color: var(--white);
+	transition: all 0.3s;
+}
+
 @media (max-width: 75em) {
 	.first {
 		margin-bottom: 65px;
@@ -3560,6 +3578,14 @@ body * {
 
 	.address {
 		max-width: 100%;
+	}
+
+	.footer__body {
+		flex-direction: column;
+	}
+
+	.footer__logo {
+		width: 150px;
 	}
 }
 
@@ -3727,5 +3753,9 @@ body * {
 	.contacts-action__btn:hover {
 		background: var(--white);
 		color: var(--light-purple);
+	}
+
+	.footer__policy:hover {
+		transform: scale(1.1);
 	}
 }
